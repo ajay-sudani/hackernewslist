@@ -10,7 +10,7 @@ export const getStoryIds = async () => {
         const { data: storyIds } = await axios.get(`${BASE_API_URL}/topstories.json`);
         return storyIds;
     } catch (error) {
-        console.log('Something went wrong!!!', error);
+        return error;
     }
 };
 
@@ -24,7 +24,7 @@ export const getStoryDetails = async (id: number) => {
         const { data } = await axios.get(`${BASE_API_URL}/item/${id}.json`);
         return data;
     } catch (error) {
-        console.log('Something went wrong!!!', error);
+        return error;
     }
 };
 
@@ -40,6 +40,6 @@ export const getStories = async (storyIds: number[]) => {
         return stories.filter((result): result is PromiseFulfilledResult<number> => result.status === "fulfilled")
             .map(x => x.value);
     } catch (error) {
-        console.log('Something went wrong!!!', error);
+        return error;
     }
 };

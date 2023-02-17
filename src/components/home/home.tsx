@@ -16,11 +16,14 @@ const Home = () => {
     const getAndSetStoryIds = async () => {
       const storyIds = await getStoryIds();
       setStoryIds(storyIds);
-      getMoreStories(storyIds.slice(0, STORIES_PER_PAGE));
     };
 
+    getAndSetStoryIds();
+  }, []);
+
+  useEffect(() => {
     const getMoreStories = async (ids: number[]) => {
-      const data = await getStories(ids);
+      const data = (await getStories(ids)) as IStory[];
       if (data?.length === 0) {
         setHasMore(false);
       } else {
@@ -28,14 +31,12 @@ const Home = () => {
       }
     };
 
-    if (page === 1) {
-      getAndSetStoryIds();
-    } else {
+    if (storyIds.length) {
       getMoreStories(
         storyIds.slice(STORIES_PER_PAGE * (page - 1), STORIES_PER_PAGE * page)
       );
     }
-  }, [page]);
+  }, [page, storyIds]);
 
   return (
     <div className={styles.container}>
@@ -57,10 +58,10 @@ const Home = () => {
           </p>
         }
         pullDownToRefreshContent={
-          <h3 className={styles.center}>&#8595; Pull down to refresh</h3>
+          <h3 className={styles.center}>Pull down to refresh</h3>
         }
         releaseToRefreshContent={
-          <h3 className={styles.center}>&#8593; Release to refresh</h3>
+          <h3 className={styles.center}>Release to refresh</h3>
         }
       >
         <div className={styles.stories}>
