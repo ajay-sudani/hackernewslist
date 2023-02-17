@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimateElement should render with other components as a child prop 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(2rem) translateZ(0)",
+      }
+    }
+  >
+    <div>
+      <span>
+        loading
+      </span>
+      <span />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`AnimateElement should render with the text as a child prop 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(2rem) translateZ(0)",
+      }
+    }
+  >
+    Animated element
+  </div>
+</div>
+`;

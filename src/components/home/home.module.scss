@@ -1,0 +1,27 @@
+@use "design-system/scss/styles/abstracts/variables" as *;
+@use "design-system/scss/styles/abstracts/colors" as *;
+@use "design-system/scss/styles/abstracts/spacing" as *;
+@use "design-system/scss/styles/abstracts/mixins.scss" as *;
+
+.container {
+  max-width: $container--max-width;
+  margin: 0 auto;
+
+  .stories {
+    display: grid;
+    grid-gap: 1.5rem 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px 20px;
+  }
+
+  .loadingContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+
+  .center {
+    text-align: center;
+  }
+}
