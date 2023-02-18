@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { STORIES_PER_PAGE } from "../../utils/constants";
