@@ -8,16 +8,16 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Added unit and snapshot tests. Snapshot tests will create a **snapshots** in a folder.
+Snapshots tests have been added for the `elements` folder. Unit tests have been added for the `home` component.
 
 ### `npm run build`
 
@@ -29,18 +29,30 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## 🧐 What's inside?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A quick look at the top-level files and directories in this directory:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    .
+    ├── __mocks__/
+    ├── src/
+    ├── design-system
+    ├── public
+    ├── .gitignore
+    ├── babel.config.js
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. **`__mocks__`**: This folder is a special directory used by the Jest testing framework for creating mock implementations of modules that your code depends on. Jest uses these mock modules to replace the real modules during testing, which allows you to test your code in isolation and ensures that your tests are not affected by any external dependencies.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **`src`**: Directory containing all of the code related to what is seen on the front-end of the site (what you see in the browser) `src` is a conventional abbreviation for “source code”. `Components` folder is for functional components and `elements` folder is used
+   as presentational components. The `elements` components have no internal state. It is only useful for displaying purpose.
 
-## Learn More
+3. **`design-system`**: This is a set of low-level "atomic" components and design tokens that codify our design / brand language and can be reused across different digital experiences. These are non-application / non-CMS specific.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **`public`**: Contains the static assets that are used by the application, such as the HTML file, images, fonts, and other static files. The public folder is the place to put files that are not processed by Webpack or other build tools, and are directly served to the browser
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **`gitignore`**: Contains git ignored files/folders
+
+6. **`babel.config.js`**: Contains configuration for babel
