@@ -1,8 +1,8 @@
-// @use "design-system/scss/styles/abstracts/colors" as *;
-// @use "design-system/scss/styles/abstracts/spacing" as *;
-// @use "design-system/scss/styles/abstracts/breakpoints" as *;
-// @use "design-system/scss/styles/abstracts/mixins" as *;
-// @use "design-system/scss/styles/base/typography/typography" as *;
+@use "design-system/scss/styles/abstracts/colors" as *;
+@use "design-system/scss/styles/abstracts/spacing" as *;
+@use "design-system/scss/styles/abstracts/breakpoints" as *;
+@use "design-system/scss/styles/abstracts/mixins" as *;
+@use "design-system/scss/styles/base/typography/typography" as *;
 
 .storyCard {
   display: flex;
