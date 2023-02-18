@@ -9,98 +9,12 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/spacing" as *;
 
-$rich-text-h1: (
-  null: (
-    font-size: 3.625rem //58px,,,,,,,,,,,,
-  ),
-  small: (
-    font-size: 3.75rem //60px,,,,,,,,,,,,
-  ),
-  medium: (
-    font-size: 4rem //64px,,,,,,,,,,,,
-  ),
-);
-
-$rich-text-h2: (
-  null: (
-    font-size: 3rem //48px,,,,,,,,,,,,
-  ),
-  small: (
-    font-size: 3.25rem //52px,,,,,,,,,,,,
-  ),
-  medium: (
-    font-size: 3.625rem //58px,,,,,,,,,,,,
-  ),
-);
-
-$rich-text-h3: (
-  null: (
-    line-height: 3.125rem,
-    //50px
-    font-size: 2.5rem //40px,,,,,,,,,,,,
-  ),
-  small: (
-    line-height: 3.275rem,
-    //52.4px
-    font-size: 2.75rem //44px,,,,,,,,,,,,
-  ),
-  medium: (
-    line-height: 3.525rem,
-    //56.4px
-    font-size: 3rem //48px,,,,,,,,,,,,
-  ),
-);
-
-$rich-text-h4: (
-  null: (
-    font-size: 1.75rem //28px,,,,,,,,,,,,
-  ),
-  small: (
-    font-size: 2rem //32px,,,,,,,,,,,,
-  ),
-  medium: (
-    font-size: 2.25rem //36px,,,,,,,,,,,,
-  ),
-);
-
-$rich-text-h5: (
-  null: (
-    font-size: 1.5rem //24px,,,,,,,,,,,,
-  ),
-  small: (
-    font-size: 1.75rem //28px,,,,,,,,,,,,
-  ),
-  medium: (
-    font-size: 1.85rem //30px,,,,,,,,,,,,
-  ),
-);
-
-$rich-text-h6: (
-  null: (
-    font-size: 1rem //16px,,,,,,,,,,,,
-  ),
-  small: (
-    font-size: 1.125rem //18px,,,,,,,,,,,,
-  ),
-  medium: (
-    font-size: 1.25rem //20px,,,,,,,,,,,,
-  ),
-);
-
-$empty-p: (
-  null: (
-    height: 0.5rem //8px,,,,,,,,,,,,
-  ),
-  medium: (
-    height: 1rem //16px,,,,,,,,,,,,
-  ),
-);
-
 body {
   @include body-default;
-  margin-bottom: 0 !important; // tech debt
+  margin-bottom: 0 !important;
   word-wrap: normal;
   word-break: normal;
+  margin: 0;
 }
 
 small {
@@ -130,9 +44,6 @@ h2 {
 h3 {
   @include display--h3;
 }
-h4 {
-  @include display--h4;
-}
 
 button {
   @include button-text-default;
@@ -141,93 +52,4 @@ button {
 hr {
   height: 2px;
   background: $black;
-}
-
-ul {
-  // TODO
-}
-
-ol {
-  // TODO
-}
-
-dl {
-  // TODO
-}
-
-blockquote {
-  // TODO
-}
-code {
-  // TODO
-}
-
-abbr {
-  // TODO
-}
-
-cite {
-  // TODO
-}
-
-kbd {
-  // TODO
-}
-
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-}
-
-.richTextCopy {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 400;
-    letter-spacing: unset;
-  }
-
-  h1 {
-    @include properties-at-breakpoint($rich-text-h1);
-  }
-  h2 {
-    @include properties-at-breakpoint($rich-text-h2);
-  }
-  h3 {
-    @include properties-at-breakpoint($rich-text-h3);
-  }
-  h4 {
-    @include properties-at-breakpoint($rich-text-h4);
-  }
-  h5 {
-    @include properties-at-breakpoint($rich-text-h5);
-  }
-  h6 {
-    @include properties-at-breakpoint($rich-text-h6);
-  }
-
-  table {
-    max-width: 100%;
-    display: block;
-    overflow-x: auto;
-  }
-  // line breaks are rendered as empty p or p with empty tags
-  // give line height to render those line-breaks
-  p {
-    &:empty,
-    *:empty {
-      display: inline-block;
-      @include properties-at-breakpoint($empty-p);
-    }
-  }
 }

@@ -41,7 +41,17 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Welcome to hacker news</h1>
+      <div className={styles.welcomeSection}>
+        <div className={styles.title}>
+          <h1>Welcome to hacker news</h1>
+        </div>
+        <div className={styles.imageRight}>
+          <img src={process.env.PUBLIC_URL + "/newsBgImage1.png"} alt="" />
+        </div>
+        <div className={styles.imageLeft}>
+          <img src={process.env.PUBLIC_URL + "/newsBgImage2.png"} alt="" />
+        </div>
+      </div>
       <InfiniteScroll
         dataLength={stories.length}
         next={() => {

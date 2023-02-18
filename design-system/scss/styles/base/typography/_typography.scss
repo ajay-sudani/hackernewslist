@@ -52,8 +52,3 @@
   @include properties-at-breakpoint($h3-props);
   @include f37ginger-regular;
 }
-
-@mixin display--h4 {
-  @include properties-at-breakpoint($h4-props);
-  @include f37ginger-regular;
-}
