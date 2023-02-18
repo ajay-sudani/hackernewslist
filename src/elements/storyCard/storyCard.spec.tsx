@@ -1,11 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import StoryCard, { IStory } from "./storyCard";
+import StoryCard, { IStroyProps } from "./storyCard";
 
-const storyCard: IStory = {
+const storyCard: IStroyProps = {
   by: "John",
-  id: 1,
-  kids: [1, 2, 3],
   score: 85,
   time: 1234567890,
   title: "Latest news about W3C",

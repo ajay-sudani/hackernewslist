@@ -20,6 +20,9 @@ exports[`StoryCard should render with default props 1`] = `
         target="_blank"
       >
         <p>
+          Blog
+        </p>
+        <p>
           John
         </p>
         <p>

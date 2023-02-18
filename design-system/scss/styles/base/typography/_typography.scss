@@ -1,0 +1,59 @@
+////
+/// @group typography
+////
+
+// Base Typography
+// - - - - - - - - - - - - - - -
+// These are styles applied to basic HTML tags, including:
+//   - Paragraphs <p>
+//   - Bold/italics <b> <strong> <i> <em>
+//   - Small text <small>
+//   - Headings <h1>-<h6>
+//   - Anchors <a>
+//   - Dividers <hr>
+//   - Lists <ul> <ol> <dl>
+//   - Blockquotes <blockquote>
+//   - Code blocks <code>
+//   - Abbreviations <abbr>
+//   - Citations <cite>
+//   - Keystrokes <kbd>
+
+@use "fonts" as *;
+@use "breakpoint-maps" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/spacing" as *;
+
+@mixin body-default {
+  @include properties-at-breakpoint($body-default-props);
+  @include poppins-regular;
+}
+
+@mixin body-small {
+  @include properties-at-breakpoint($body-small-props);
+  @include poppins-regular;
+}
+
+@mixin button-text-default {
+  @include properties-at-breakpoint($button-default-props);
+  @include f37ginger-regular;
+}
+
+@mixin display--h1 {
+  @include f37ginger-regular;
+  @include properties-at-breakpoint($h1-props);
+}
+
+@mixin display--h2 {
+  @include properties-at-breakpoint($h2-props);
+  @include f37ginger-regular;
+}
+
+@mixin display--h3 {
+  @include properties-at-breakpoint($h3-props);
+  @include f37ginger-regular;
+}
+
+@mixin display--h4 {
+  @include properties-at-breakpoint($h4-props);
+  @include f37ginger-regular;
+}

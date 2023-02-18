@@ -1,6 +1,17 @@
 import axios from 'axios';
 import { BASE_API_URL } from '../../utils/constants';
 
+export interface IStory {
+    id: number;
+    by: string;
+    score: number;
+    time: number;
+    title: string;
+    type: string;
+    url: string;
+    kids: number[];
+}
+
 /**
  * Get ids of top stories from hacker news API
  * @returns story ids

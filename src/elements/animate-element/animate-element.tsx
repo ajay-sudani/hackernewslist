@@ -21,7 +21,7 @@ const blockAnimation = {
   },
 };
 
-const AnimateElement: React.FC<IAnimateElement> = (props) => {
+const AnimateElement = (props: IAnimateElement) => {
   const { children } = props;
   const controls = useAnimation();
 

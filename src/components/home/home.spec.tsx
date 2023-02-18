@@ -1,8 +1,12 @@
 import mockAxios from "jest-mock-axios";
 import "@testing-library/jest-dom/extend-expect";
 import { BASE_API_URL } from "../../utils/constants";
-import { getStoryIds, getStoryDetails, getStories } from "./home.service";
-import { IStory } from "../../elements/storyCard/storyCard";
+import {
+  IStory,
+  getStoryIds,
+  getStoryDetails,
+  getStories,
+} from "./home.service";
 
 jest.mock("axios");
 

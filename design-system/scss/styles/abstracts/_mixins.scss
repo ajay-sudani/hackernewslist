@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains GLOBAL mixin declarations
+// -----------------------------------------------------------------------------
+@use "sass:math";
+@use "breakpoints" as *;
+@use "variables" as *;
+
+// Create a media query by using width as a breakpoint
+@mixin properties-at-breakpoint($prop-map, $prop-breakpoints: $breakpoints) {
+  @each $prop-breakpoint, $prop-property-map in $prop-map {
+    @if $prop-breakpoint == null {
+      @each $property-name, $property-value in $prop-property-map {
+        #{$property-name}: $property-value;
+      }
+    } @else {
+      // if $prop-property-map is a key that exists in
+      // $prop-breakpoints, use the value
+      @if map-has-key($prop-breakpoints, $prop-breakpoint) {
+        $prop-breakpoint: map-get($prop-breakpoints, $prop-breakpoint);
+      }
+      @media screen and (min-width: $prop-breakpoint) {
+        @each $property-name, $property-value in $prop-property-map {
+          #{$property-name}: $property-value;
+        }
+      }
+    }
+  }
+}

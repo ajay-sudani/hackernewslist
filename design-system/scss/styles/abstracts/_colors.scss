@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains GLOBAL color declarations
+// -----------------------------------------------------------------------------
+
+////
+/// @group color
+////
+
+// --------------------------------------------------------
+// Primary Colors
+// --------------------------------------------------------
+
+/// Primary Color: red
+/// @type Color
+$presidio: #ff4d37;
+
+/// Primary Color: dark-grey
+/// @type Color
+$asphalt: #233741;
+
+/// Primary Color: cream
+/// @type Color
+$daylight: #fff3e1;
+
+/// Primary Color: white
+/// @type Color
+$white: #ffffff;
+
+/// Primary Color: black
+/// @type Color
+$black: #000000;
+
+// --------------------------------------------------------
+// Secondary Colors
+// --------------------------------------------------------
+
+/// Secondary Color: dark-grey
+/// @type Color
+$heavy-fog: #404040;
+
+/// Secondary Color: grey
+/// @type Color
+$fog: #808080;
+
+/// Secondary Color: light-grey
+/// @type Color
+$light-fog: #bfbfbf;
+
+// ----------------------------------
+// Button & Element Background Colors
+// ----------------------------------
+
+// ----------------------------------
+// Primary Button
+// ----------------------------------
+
+/// Button primary background color
+/// Default Dark Theme
+/// @type Color
+$btn-primary-color: $presidio;
+
+/// Button primary hover color
+/// @type Color
+$btn-primary-color--hover: $asphalt;
+
+// ----------------------------------
+// Secondary Button
+// ----------------------------------
+
+/// Button secondary color
+/// Default Dark Theme
+/// @type Color
+$btn-secondary-color: $asphalt;
+
+/// Button secondary hover color
+/// @type Color
+$btn-secondary-color--hover: $presidio;

@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains Grid and Layout related items
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/mixins" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/variables" as *;
+
+// ------------------------------------------------------------
+// Container
+// ------------------------------------------------------------
+$container-padding-top: (
+  null: (
+    padding-top: $spacing-07 // 24px,,,,,,,,,,
+  ),
+  medium: (
+    padding-top: $layout-01 // 48px,,,,,,,,,,
+  ),
+);
+
+@mixin containerPaddingTop {
+  @include properties-at-breakpoint($container-padding-top);
+}
+
+// ------------------------------------------------------------
+// Z-index : Layers
+// ------------------------------------------------------------
+@mixin layer-00() {
+  z-index: 0;
+}
+
+@mixin layer-10() {
+  z-index: 10;
+}
+
+@mixin layer-top() {
+  z-index: 9999;
+}
+
+@mixin layer-behind() {
+  z-index: -1;
+}

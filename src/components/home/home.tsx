@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { STORIES_PER_PAGE } from "../../utils/constants";
-import { getStories, getStoryIds } from "./home.service";
+import { IStory, getStories, getStoryIds } from "./home.service";
 import Loader from "../../elements/loader";
-import Card, { IStory } from "../../elements/storyCard/storyCard";
+import Card from "../../elements/storyCard/storyCard";
 import styles from "./home.module.scss";
 
 const Home = () => {

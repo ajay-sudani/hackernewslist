@@ -1,0 +1,7 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "Design system",
+  "main": "src/index.js",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,153 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations
+// -----------------------------------------------------------------------------
+
+// Poppins
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../../fonts/Poppins-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+// F37 Ginger
+@font-face {
+  font-family: "F37 Ginger";
+  src: url("../../../fonts/f37ginger-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "F37 Ginger";
+  src: url("../../../fonts/f37ginger-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+$poppins: "Poppins", sans-serif;
+$f37ginger: "F37 Ginger", sans-serif;
+
+// Font family mixins
+@mixin poppins-light {
+  font-family: $poppins;
+  font-weight: 300;
+}
+
+@mixin poppins-light-italic {
+  @include poppins-light;
+  font-style: italic;
+}
+
+@mixin poppins-regular {
+  font-family: $poppins;
+  font-weight: 400;
+}
+
+@mixin poppins-regular-italic {
+  @include poppins-regular;
+  font-style: italic;
+}
+
+@mixin poppins-medium {
+  font-family: $poppins;
+  font-weight: 500;
+}
+
+@mixin poppins-medium-italic {
+  @include poppins-medium;
+  font-style: italic;
+}
+
+@mixin poppins-semibold {
+  font-family: $poppins;
+  font-weight: 600;
+}
+
+@mixin poppins-semibold-italic {
+  @include poppins-semibold;
+  font-style: italic;
+}
+
+@mixin f37ginger-regular {
+  letter-spacing: -0.02rem;
+  font-family: $f37ginger;
+  font-weight: 400;
+}
+
+@mixin f37ginger-regular-italic {
+  letter-spacing: -0.02rem;
+  @include f37ginger-regular;
+  font-style: italic;
+}
+
+@mixin f37ginger-bold {
+  letter-spacing: -0.02rem;
+  font-family: $f37ginger;
+  font-weight: 700;
+}
+
+@mixin f37ginger-bold-italic {
+  letter-spacing: -0.02rem;
+  @include f37ginger-bold;
+  font-style: italic;
+}
