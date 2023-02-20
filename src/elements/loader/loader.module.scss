@@ -18,14 +18,14 @@
 
   .load {
     background-color: #9a79ff;
-    border-radius: 50px;
+    border-radius: 3rem;
     display: block;
     height: 16px;
     width: 16px;
     bottom: 0;
     position: absolute;
     transform: translateX(64px);
-    animation: loading_713 3.5s ease both infinite;
+    animation: loading 3.5s ease both infinite;
 
     &::before {
       position: absolute;
@@ -34,7 +34,7 @@
       height: 100%;
       background-color: #d1c2ff;
       border-radius: inherit;
-      animation: loading2_713 3.5s ease both infinite;
+      animation: loading2 3.5s ease both infinite;
     }
   }
 }
@@ -66,7 +66,7 @@
   }
 }
 
-@keyframes loading_713 {
+@keyframes loading {
   0% {
     width: 16px;
     transform: translateX(0px);
@@ -93,7 +93,7 @@
   }
 }
 
-@keyframes loading2_713 {
+@keyframes loading2 {
   0% {
     transform: translateX(0px);
     width: 16px;

@@ -4,20 +4,73 @@
 @use "design-system/scss/styles/abstracts/mixins.scss" as *;
 @use "design-system/scss/styles/layout/layout.scss" as *;
 
+$stories-props: (
+  null: (
+    padding: 0 2rem,
+    grid-gap: 3rem 0,
+    grid-template-columns: repeat(1),
+  ),
+  medium: (
+    padding: 0 $layout-01,
+    grid-gap: 1.5rem 3rem,
+    grid-template-columns: repeat(2, 1fr),
+  ),
+  large: (
+    padding: 0 $layout-03,
+    grid-gap: 1.5rem 5rem,
+    grid-template-columns: repeat(3, 1fr),
+  ),
+);
+
+$title-props: (
+  null: (
+    width: 80%,
+    top: 60px,
+    left: 50%,
+    transform: translateX(-50%),
+    padding: 0 1rem,
+    text-align: center,
+  ),
+  large: (
+    width: unset,
+    padding: 0 $layout-01,
+    right: 40%,
+    left: unset,
+    transform: unset,
+  ),
+);
+
+$imageRight-props: (
+  large: (
+    width: 100%,
+  ),
+);
+
+@mixin storiesProps {
+  @include properties-at-breakpoint($stories-props);
+}
+
+@mixin titleProps {
+  @include properties-at-breakpoint($title-props);
+}
+
+@mixin imageRightProps {
+  @include properties-at-breakpoint($imageRight-props);
+}
+
 .container {
   background-color: $light-fog;
+
   .welcomeSection {
     position: relative;
     overflow: hidden;
 
     .title {
       position: absolute;
-      @include layer-top();
-      right: 40%;
-      top: 100px;
       background-color: $presidio;
       color: $white;
-      padding: 0 $layout-01;
+      @include layer-top();
+      @include titleProps();
     }
 
     .imageRight {
@@ -25,36 +78,34 @@
       left: 30%;
 
       img {
-        width: 100%;
-        height: 400px;
+        @include imageRightProps();
       }
     }
 
     .imageLeft {
       position: relative;
-      margin-top: -150px;
+      margin-top: -$layout-10;
       @include layer-10();
     }
 
     img {
       object-fit: contain;
+      height: 350px;
     }
   }
 
   .stories {
     max-width: $container--max-width;
-    margin: 50px auto;
-    padding: 0 $layout-03;
     display: grid;
-    grid-gap: 1.5rem 5rem;
-    grid-template-columns: repeat(3, 1fr);
+    margin: $spacing-13 auto;
+    @include storiesProps();
   }
 
   .loadingContent {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: $layout-11;
   }
 
   .center {
