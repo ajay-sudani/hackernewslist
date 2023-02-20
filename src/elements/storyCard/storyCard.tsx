@@ -21,15 +21,30 @@ const Card = (props: IStroyProps) => {
   return (
     <AnimateElement>
       <div className={styles.storyCard} role="group" aria-label="news">
-        <a href={url} target="_blank" rel="noreferrer">
-          <p>{type}</p>
-          <p>{by}</p>
-          <p>Score: {score}</p>
-          <p>{date}</p>
-          <p>{title}</p>
-        </a>
-        <a href={url} target="_blank" rel="noreferrer">
-          View News
+        <div>
+          <p className={styles.indicator}></p>
+          By {by}
+        </div>
+
+        <h2>{title}</h2>
+
+        <div className={styles.type}>
+          {type}
+          <p className={styles.indicator}></p>
+        </div>
+
+        <div>
+          <p className={styles.indicator}></p>
+          Score: <b>{score} points</b>
+        </div>
+
+        <div>
+          <p className={styles.indicator}></p>
+          Time: <b>{date}</b>
+        </div>
+
+        <a className={styles.view} href={url} target="_blank" rel="noreferrer">
+          View Story
         </a>
       </div>
     </AnimateElement>

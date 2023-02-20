@@ -2,6 +2,7 @@
 @use "design-system/scss/styles/abstracts/spacing" as *;
 @use "design-system/scss/styles/abstracts/breakpoints" as *;
 @use "design-system/scss/styles/abstracts/mixins" as *;
+@use "design-system/scss/styles/abstracts/variables" as *;
 @use "design-system/scss/styles/base/typography/typography" as *;
 
 .storyCard {
@@ -9,17 +10,67 @@
   flex-direction: column;
   height: auto;
   justify-content: flex-start;
-  transition: all 0.5s ease-out;
-  border-radius: 10px;
-  background-color: #f0f1f1;
-  padding: 16px;
+  transition: all 0.5s ease;
+  border-radius: $border-radius-size;
+  background-color: $white;
+  padding: $spacing-07;
+  color: $black;
 
   &:hover {
+    color: $white;
+    background-color: $presidio;
     box-shadow: 0 4px 20px -2px rgb(21 25 36 / 50%);
+
+    .indicator {
+      background-color: $white;
+    }
+
+    .view {
+      background-color: $light-fog;
+      color: $black;
+    }
   }
 
   a {
     color: unset;
     text-decoration: none;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &.type {
+      justify-content: flex-end;
+
+      .indicator {
+        margin-left: 10px;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    b {
+      margin-left: 10px;
+    }
+
+    .indicator {
+      width: 20px;
+      height: 4px;
+      margin-right: 10px;
+      background-color: $presidio;
+    }
+  }
+
+  .view {
+    margin: 10px 0;
+    background-color: $presidio;
+    color: $white;
+    padding: 10px;
+    text-align: center;
+    border-radius: $border-radius-size;
   }
 }
