@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoryCard should render with default props 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(2rem) translateZ(0)",
+      }
+    }
+  >
+    <div
+      aria-label="news"
+      role="group"
+    >
+      <div>
+        <p />
+        By 
+        John
+      </div>
+      <h2>
+        Latest news about W3C
+      </h2>
+      <div>
+        Blog
+        <p />
+      </div>
+      <div>
+        <p />
+        Score: 
+        <b>
+          85
+           points
+        </b>
+      </div>
+      <div>
+        <p />
+        Time: 
+        <b>
+          Sat Feb 14 2009
+        </b>
+      </div>
+      <a
+        href="http://www.dummy.com"
+        rel="noreferrer"
+        target="_blank"
+      >
+        View Story
+      </a>
+    </div>
+  </div>
+</div>
+`;

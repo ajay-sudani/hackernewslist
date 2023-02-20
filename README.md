@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to run
+
+1. Clone repo (URL: https://github.com/ajay-sudani/hackernewslist.git)
+2. run `npm install`
+3. run `npm start`
+4. Open url : http://localhost:3000
+
 ## Available Scripts
 
 In the project directory, you can run:
