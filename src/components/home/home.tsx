@@ -45,11 +45,8 @@ const Home = () => {
         <div className={styles.title}>
           <h1>Welcome to hacker news</h1>
         </div>
-        <div className={styles.imageRight}>
-          <img src={process.env.PUBLIC_URL + "/newsBgImage1.png"} alt="" />
-        </div>
-        <div className={styles.imageLeft}>
-          <img src={process.env.PUBLIC_URL + "/newsBgImage2.png"} alt="" />
+        <div className={styles.imageContainer}>
+          <img src={process.env.PUBLIC_URL + "/newsBgImage.png"} alt="" />
         </div>
       </div>
       <InfiniteScroll

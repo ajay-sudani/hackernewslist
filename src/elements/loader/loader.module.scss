@@ -10,14 +10,14 @@
     top: 0;
     padding: 0;
     margin: 0;
-    color: #c8b6ff;
+    color: $fog;
     animation: text_713 3.5s ease both infinite;
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
 
   .load {
-    background-color: #9a79ff;
+    background-color: $asphalt;
     border-radius: 3rem;
     display: block;
     height: 16px;
@@ -32,7 +32,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background-color: #d1c2ff;
+      background-color: $fog;
       border-radius: inherit;
       animation: loading2 3.5s ease both infinite;
     }

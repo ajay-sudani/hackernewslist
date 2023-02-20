@@ -25,24 +25,18 @@ $stories-props: (
 $title-props: (
   null: (
     width: 80%,
-    top: 60px,
+    top: 50%,
     left: 50%,
-    transform: translateX(-50%),
+    transform: translate(-50%, -50%),
     padding: 0 1rem,
     text-align: center,
+  ),
+  medium: (
+    width: 50%,
   ),
   large: (
     width: unset,
     padding: 0 $layout-01,
-    right: 40%,
-    left: unset,
-    transform: unset,
-  ),
-);
-
-$imageRight-props: (
-  large: (
-    width: 100%,
   ),
 );
 
@@ -54,12 +48,9 @@ $imageRight-props: (
   @include properties-at-breakpoint($title-props);
 }
 
-@mixin imageRightProps {
-  @include properties-at-breakpoint($imageRight-props);
-}
-
 .container {
   background-color: $light-fog;
+  min-height: 100vh;
 
   .welcomeSection {
     position: relative;
@@ -73,24 +64,12 @@ $imageRight-props: (
       @include titleProps();
     }
 
-    .imageRight {
-      position: relative;
-      left: 30%;
-
+    .imageContainer {
       img {
-        @include imageRightProps();
+        width: 100%;
+        object-fit: cover;
+        height: 70vh;
       }
-    }
-
-    .imageLeft {
-      position: relative;
-      margin-top: -$layout-10;
-      @include layer-10();
-    }
-
-    img {
-      object-fit: contain;
-      height: 350px;
     }
   }
 
