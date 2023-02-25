@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Loader from "../loader";
-import AnimateElement from "./animate-element";
+import AnimateElement from "./animateElement";
 
 describe("AnimateElement", () => {
   it("should render with the text as a child prop", () => {

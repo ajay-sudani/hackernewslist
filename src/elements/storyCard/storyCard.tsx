@@ -2,7 +2,7 @@
  * Button element
  */
 import * as React from "react";
-import AnimateElement from "../animate-element/animate-element";
+import AnimateElement from "../animateElement/animateElement";
 import styles from "./storyCard.module.scss";
 
 export interface IStroyProps {
