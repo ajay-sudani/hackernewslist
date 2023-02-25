@@ -51,4 +51,4 @@ const Card = (props: IStroyProps) => {
   );
 };
 
-export default Card;
+export default React.memo(Card);
